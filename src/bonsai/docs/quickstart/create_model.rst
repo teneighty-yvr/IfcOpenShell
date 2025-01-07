@@ -46,9 +46,10 @@ Class**.
 
 Select the cube (selected objects are highlighted in orange, careful not to
 select anything else!) and switch to the :menuselection:`Properties --> Object
-Information` tab. Let's pretend our Cube is a column, so select **IfcElement**
-from the **Products** dropdown, **IfcColumn** from the **Class** drop-down, and
-press **Assign IFC Class**.
+Information` tab. Let's pretend our Cube is a column, so in the
+:menuselection:`Object Metadata` panel, select **IfcElement** from the 
+**Products** dropdown, **IfcColumn** from the **Class** drop-down, and press
+**Assign IFC Class**.
 
 .. image:: images/assign-class.png
 
@@ -58,9 +59,9 @@ press **Assign IFC Class**.
    the shape of your object. You can have a monkey-shaped wall if you want!
 
 All IFC objects must also belong inside the **Spatial Tree**. In the
-:menuselection:`Properties --> Object Information --> Spatial Container` panel,
-you will see that your newly created **IfcColumn/Cube** has been automatically
-placed in **IfcBuildingStorey/My Storey**.
+:menuselection:`Properties --> Object Information --> Object Metadata --> Spatial
+Container` panel, you will see that your newly created **IfcColumn/Cube** has been
+automatically placed in **IfcBuildingStorey/My Storey**.
 
 .. image:: images/cube-spatial-tree.png
 
@@ -81,7 +82,22 @@ the image below. Three simple open source online viewers you can test with are
 Placing occurrences of an element type
 --------------------------------------
 
-TODO
+In the :menuselection:`3D Viewport --> Add --> Mesh` menu, select
+**Cube**.
+
+Select the cube and switch to the :menuselection:`Properties --> Object
+Information --> Object Metadata` panel. This time, instead of selecting
+IfcElement, from the **Products** dropdown, select **IfcElementType**. 
+Then select **IfcColumnType** from the **Class** drop-down, and press 
+**Assign IFC Class**.
+
+The cube will disappear, becuase it's a type and not an element. Now select
+cube we created in the last section which we made an **IfcColumn** and in
+the :menuselection:`Properties --> Object Infomration --> Object Metadata
+--> Type` panel, click the edit button at "No Relating Type". Select the
+IfcColumnType from the drop downs and click the checkmark button to assign
+the type. Now the IfcColumn element can inherit properties from the 
+IfcColumnType.
 
 Changing the locations of elements
 ----------------------------------
